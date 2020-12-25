@@ -170,7 +170,7 @@
               <div class="row">
                   <div class="table-responsive">
                     <table class="table table-responsivetable-hover table-striped">
-                        thead class="text-center text-nowrap">
+                        <thead class="text-center text-nowrap">
                           <tr>
                               <th></th>
                               <th></th>

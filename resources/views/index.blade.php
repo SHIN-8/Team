@@ -3,15 +3,15 @@
 @section('title','top')
 
 @section('content')
-<div class="container-fluid ">
+<div class="container-fluid">
     <div class="imgtext">
         @if($team->img ==null)
             <img class="max" src="{{ asset('/storage/img/'.'4075649_m.jpg')}}">
         @else
             <img class="max" src="{{ asset('/storage/img/'.$team->img)}}">
         @endif
-      <p class="teamname text-nowrap">{{$team->name}}</p>
     </div>
+    <div class="contentstitle text-center text-nowrap">{{$team->name}}</div>
 <!-- NextGame -->
 <div>
     @guest                      
@@ -79,7 +79,7 @@
         </div>
       </div>
     @endguest
-
+@if($schedules)
     <h2 class="contentstitle text-center">NextGame</h2>
   <div class="card">
     <a  href="{{ url('schedules',$schedules->id) }}">
@@ -154,6 +154,7 @@
     </div>
   </a>
 </div>
+@endif
 <!-- NextGameEnd -->
 
 <!-- Contents -->
@@ -161,49 +162,49 @@
 <div>
   <h2 class="contentstitle text-center">Contents</h2>
       <div class="row">      
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('team') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_event_9_s512_f_event_9_0bg.png')}}" width="100%"> 
                 <p class="navi nav-link contentstitle text-center" >TEAM</p>
               </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext"> 
+          <div class="col-6 col-md-4 col-lg-3 imgtext"> 
               <a class="btn-img" href="{{ url('users') }}">
                 <img src="{{ asset('/storage/img/'.'user.png')}}" width="100%">
                 <p class="navi nav-link contentstitle text-center">PLAYER</p>
               </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('results') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_business_20_s512_f_business_20_0bg.png')}}" width="100%">
                 <p class="navi nav-link contentstitle text-center">RESULTS</p>
               </a>      
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('table') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_object_124_s512_f_object_124_2bg.png')}}" width="100%">
                 <p class="navi nav-link contentstitle text-center">RECORDS</p>
               </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('schedules') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_business_23_s512_f_business_23_0bg.png')}}" width="100%">
-                <p class="navi nav-link contentstitle text-center">SCHEDULES</p>
+                <p class="navi nav-link contentstitle text-center">SCHEDULE</p>
               </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('blog') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_object_24_s512_f_object_24_2bg.png')}}" width="100%"> 
                 <p class="navi nav-link contentstitle text-center">BLOG</p>
               </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('album') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_business_5_s512_f_business_5_0bg.png')}}" width="100%">
                 <p class="navi nav-link contentstitle text-center">ALBUM</p>
               </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 imgtext">
+          <div class="col-6 col-md-4 col-lg-3 imgtext">
               <a class="btn-img" href="{{ url('contact') }}">
                 <img src="{{ asset('/storage/img/'.'f_f_business_12_s512_f_business_12_0bg.png')}}" width="100%">
                 <p class="navi nav-link contentstitle text-center">CONTACTS</p>

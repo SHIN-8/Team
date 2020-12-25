@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -30,9 +30,8 @@ class HomeController extends Controller
         $team = Team::findOrFail(1);
         $today = date("Y-m-d");
         $schedules = Schedules::where('date','>=',$today)->orderBy('date','asc')->first();
-        $place = Place::where('id',$schedules->place)->first();
         $user = Auth::user();
 
-        return view('index',compact('team','schedules','place','user'));
+        return view('index',compact('team','schedules','user'));
     }
 }

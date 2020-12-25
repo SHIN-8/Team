@@ -126,6 +126,7 @@
                             <option>勝</option>
                             <option>負</option>
                             <option>Ｓ</option>
+                            <option></option>
                         </select>
                     </div>
                   </td>
