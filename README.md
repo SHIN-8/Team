@@ -36,7 +36,7 @@
     $ git clone https://github.com/SHIN-8/Team.git
 
 # Author
- SHIN-8
+  SHIN-8
 
 
 
