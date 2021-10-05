@@ -10,6 +10,7 @@ class Album extends Model
         'img',
      ];
     
+     
     protected $table = 'album';
 
 }
